@@ -1,0 +1,18 @@
+:td * {
+    margin: 0;
+    padding: 0;
+
+}
+
+th {
+    border-style: solid;
+    border-color: rgb(red, green, blue);
+    background-color: blue;
+    color: aliceblue;
+    width: 10%;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
