@@ -16,6 +16,8 @@
             margin: 3px;
             background-color: cyan;
             flex: 0 1 100%;
+            padding-left: 10px;
+
 
         }
 
@@ -48,7 +50,7 @@
         </div>
 
         <div class="boxitem">
-            <h4 style="margin: left 10px;;">Second Article</h4>
+            <h4 style="margin: left 10px;">Second Article</h4>
             <a>
                 The order property is designed to lay the items out in ordinal groups.
                 What this means is that items are assigned an integer that represents
@@ -83,8 +85,6 @@
 
 
 <p>Question2</p>
-
-
 
 <style>
     .a1 {
@@ -143,11 +143,12 @@
     }
 
     .a5 {
-
-        margin: 3px;
+        display: flex;
+        margin: 2px;
         height: 300px;
         width: 400px;
         background-color: antiquewhite;
+
 
 
 
@@ -155,11 +156,30 @@
 
     .box5 {
         display: flex;
-        margin-top: 5px;
-
         height: 260;
-
         justify-content: space-between;
+        column-gap: 3px;
+
+    }
+
+
+    .im {
+        display: flex;
+        width: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+
+
+
+    .imag {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border: solid black;
+        flex-grow: 1;
 
     }
 </style>
@@ -227,7 +247,7 @@
                 that integer, lowest values first. If more than one item has the same
                 integer value, then within that group the items are laid out as per
                 source orde</div>
-            <button class="box" style="align-items: flex-end;width: 100100%;height:38px;">Card footer</button>
+            <button class="box" style="align-items: flex-end;width: 100%;height:38px;">Card footer</button>
         </a>
 
 
@@ -239,14 +259,30 @@
                 that integer, lowest values first. If more than one item has the same
                 integer value, then within that group the items are laid out as per
                 source orde</div>
-            <button class="box" style="align-items: flex-end;width: 100%;height:38px;">Card footer</button>
+            <button class="box" style="align-items: flex-end;width:99%;height:38px;">Card footer</button>
         </a>
 
-
-
     </div>
+</div>
+</div>
 
-
+<div class="im">
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:100%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:128%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:128%;"></div>
+    <div class="imag"><img src="/cs315/imag/imag.rose.jpg" style="height:128%;"></div>
+</div>
 
 
 

@@ -2,16 +2,12 @@
 
 <head>
     <style>
-        body {
-            background-color: lightgray;
-            width: 2500px;
-            height: 565px;
-        }
-
         .mainDiv {
-            border: 1px solid green;
+            border: 3px solid whitesmoke;
             padding: 10px;
-            height: 100%;
+            height: 700px;
+            width: 820px;
+            background-color: whitesmoke;
         }
 
         .articleDiv {
@@ -21,25 +17,42 @@
             width: 65%;
         }
 
-        .sidebar {
-            border: 1px solid yellow;
-            padding: 10px;
-            float: right;
-            width: 20%;
-        }
 
         .firstPage {
-            margin: top 1px;
+            width: 400px;
+            height: 210px;
+            border: 1px solid black;
+            padding: 5px;
             background-color: white;
-            border: 1px solid blue;
-            margin-right: 2000px;
+
         }
 
+        .second {
+            width: 400px;
+            height: 210px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: white;
+            position: relative;
+            top: 5px;
+
+        }
+
+        .therd {
+            width: 400px;
+            height: 210px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: white;
+            position: relative;
+            top: 10px;
+
+        }
 
         #home {
             width: auto;
-            position: absolute;
-            margin-left: 40px;
+            position: relative;
+            margin-left: 20px;
             margin-bottom: 50px;
             text-transform: capitalize;
 
@@ -47,18 +60,19 @@
 
         #recent {
             width: auto;
-            position: absolute;
-            margin-left: 100px;
+
+            margin-left: 10px;
             margin-bottom: 50px;
-            position: absolute;
+            position: relative;
             text-transform: capitalize;
+
 
         }
 
         #blog {
             width: auto;
-            position: absolute;
-            margin-left: 120px;
+            position: relative;
+            margin-left: 10px;
             margin-bottom: 50px;
             text-transform: capitalize;
 
@@ -67,8 +81,8 @@
 
         #about {
             width: auto;
-            position: absolute;
-            margin-left: 200px;
+            position: relative;
+            margin-left: 10px;
             margin-bottom: 50px;
             text-transform: capitalize;
 
@@ -77,10 +91,11 @@
 
         #cntcat {
             width: auto;
-            position: absolute;
-            margin-left: 250px;
+            position: relative;
+            margin-left: 10px;
             margin-bottom: 50px;
             text-transform: capitalize;
+
 
         }
 
@@ -94,10 +109,71 @@
             margin-top: 0px;
         }
 
-        #list {
-            height: 1000px;
-            margin-left: 2000px;
-            margin-bottom: 500px;
+        #list {}
+
+        .serch {
+            height: 70px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 680px;
+
+        }
+
+        #id {
+            height: 20px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 680px;
+            border-bottom: 2px solid b
+        }
+
+        #reset {
+            height: 150px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 680px;
+            padding-left: 10px;
+
+        }
+
+        #page {
+            height: 110px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 710px;
+
+            padding-left: 10px;
+
+        }
+
+        #cat {
+            height: 100px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 750px;
+            padding-left: 10px;
+
+        }
+
+        #rec {
+            height: 120px;
+            width: 200px;
+            background: white;
+            position: relative;
+            left: 600px;
+            bottom: 790px;
+            padding-left: 10px;
+
         }
     </style>
     </style>
@@ -114,12 +190,10 @@
                 <p6 id="cntcat">Contact me</p6>
     </p>
     <div class="mainDiv">
-        <br class="articleDiv">
-
         <div class="firstPage">
             <h1>An Example #3</h1>
-            <p><sub>An Example of Thecnology Bolg</sub></p>
-            <img src="/cs315/imag/im1.pg.jpg " width="75px" height="55" style="float: left;margin-right: 10px;">
+            <p><sub>An Example of Thechnology Bolg</sub></p>
+            <img src="/cs315/imag/im1.pg.jpg " width="75px" height="55" style="float: lef">
 
             <a>The final type of value we will take a look<br>
                 at is the group of values known as functions.<br>
@@ -127,7 +201,7 @@
             <b id="red"> Read More</b>
         </div>
 
-        <div class="firstPage">
+        <div class="second">
             <h1>An Example #2</h1>
             <a>
                 <p><sub>An Example of Thecnology Bolg</sub></p>
@@ -137,11 +211,12 @@
 
                 <b id="red"> Read More</b>
             </a>
-        </div><br><br>
-        <div class="firstPage">
+        </div>
+
+        <div class="therd">
             <h1>An Example #1</h1>
             <p><sub>An Example of Thecnology Bolg</sub></p>
-            <img src="/cs315/imag/im3.mh.jpg " width="75px" height="55" style="float: left;margin-right: 10px;">
+            <img src="/cs315/imag/im3.mh.jpg " width="75px" height="55" style="float: left;">
 
             <a>The final type of value we will take a look<br>
                 at is the group of values known as functions.<br>
@@ -149,15 +224,38 @@
             <b id="red"> Read More</b>
         </div>
 
-        <div id="list">
-            <q1>SERACh</q1><br>
-            <q2>Recentpost</q2><br>
-            <q3>page</q3><br>
-            <q4>Catagories</q4><br>
-            <q2>Recentpost</q2><br>
+        <p id="list">
+        <p class="serch">SERACh<br><b>__________________</b><br>
+            serach for<button style="width: 50px;height:15px;">fore <button
+                    style="width:50px; height:15px;margin-left: 5px;">seach</button></button>
+        <p id="reset">Recentpost<br><b>________________</b><br>
+            An Example post #3<br>
+            A Example post #2</br>
+            An Example post #1</br>
+            An Example post #0</br></p><br>
+
+        <p id="page">page <br><b>_______________</b><br>
+            Home<br>
+            RecentPost<br> Blog<br>
+            About me</p><br>
 
 
-        </div>
+        <p id="cat">Catagories<br><b>____________________</b><br>
+            Bolg Post<br>
+            Example post<br>
+            Nature</p>
+        <br></br>
+        <p id="rec">Recentpost <br>
+
+            <b>____________</b><br>
+            An Example post #3<br>
+            A Example post #2</br>
+            An Example post #1</br>
+            An Example post #0
+        </p><br>
+    </div>
+    </div>
+
 </body>
 
 </html>

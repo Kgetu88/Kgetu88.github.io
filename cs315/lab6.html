@@ -1,150 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <style>
-        footer {
-            display: grid;
-            background-color: black;
-            border-radius: 20px;
-            padding: 30p;
-
-            justify-content: space-between;
-        }
-
-        .subscribe {
-            background-color: darkorange;
-            border-radius: 20px;
-            color: darkmagenta;
-            color: aliceblue;
-        }
-
-        .roundbox {
-            display: flex;
-            background-color: indigo;
-            justify-content: space-between;
-            border: 2px solid;
-            border-radius: 20px;
-            gap: 10px;
-            margin-top: 10px;
-            margin-left: 10px;
-            font-size: small;
-            padding: 2px;
-
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        .email {
-            text-align: center;
-            color: aliceblue;
-        }
-
-        .lisitem {
-            display: grid;
-            gap: 10px;
-            color: rgb(126, 94, 98);
-
-            grid-template-columns: 100px 100px 100px;
-            margin-left: 50px;
-            margin-top: 20px;
-
-
-        }
-
-        .lastlin {
-            display: flex;
-            color: white;
-            justify-content: space-between;
-            margin-left: 20px;
-        }
-
-        .imag {
-            display: grid;
-            flex-wrap: wrap;
-            row-gap: 2px;
-
-
-
-        }
-
-        #id {
-            width: 80px;
-            height: 40px;
-            display: flex;
-
-            justify-content: space-between;
-        }
-
-        .im {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-    </style>
+    <title>Assignment</title>
 </head>
+<style>
+    .imgNew {
+        color: white;
+        width: 20px;
+        object-fit: contain;
+        margin-top: 15px;
+    }
+
+    .imgClass {
+        width: 40%;
+        object-fit: contain;
+    }
+
+    footer {
+        display: flex;
+        width: 70%;
+        background-color: darkred;
+        flex-direction: column;
+        padding: 50px 100px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.8fr;
+        row-gap: 10px;
+        column-gap: 30px;
+        color: white;
+        justify-content: center;
+        color: gray;
+    }
+
+    .heading {
+        font-size: 20px;
+        color: white;
+    }
+
+    .aboutMeMargin {
+        margin-bottom: 40px;
+    }
+
+    .middleColumngrid {
+        display: grid;
+        column-gap: 20px;
+        align-content: start;
+        /* row-gap:10px; */
+        grid-template-columns: 20px 1fr;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .lastColumn {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .emailBox {
+        height: 40px;
+        width: 130%;
+        color: white;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
+
+
+    }
+</style>
 
 <body>
     <footer>
-
         <div class="container">
-
-            <dive class="lisitem">
-                <p style="color: white;"><b>About Us</b>
+            <p class="heading">About Me</p>
+            <p class="heading">Latest Tweet</p>
+            <p class="heading">Instagram</p>
+            <div>
+                <p class="aboutMeMargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Nulla at volutpat diam ut venenatis tellus. Sed id semper risus
+                    Nulla at volutpat diam ut venenatis tellus. Sed id semper risus
                 </p>
-
-                <p style="color: white;">Latest Tweet</b></p>
-
-                <p style="color:white;"><b>Instagram</b></p>
-                <div id="id">
-                    <im class="imag">
-
-                        <img src="/cs315/imag/im3.mh.jpg" width="20px"></img>
-                        <img src="/cs315/imag/catalin-pop-F3RzvCbHEsc-unsplash.jpg " width="20px">
-                        <img src="/cs315/imag/im1.pg.jpg " width="20px">
-
-                </div>
-                <div id="id">
-                      
-                        
-
-                </div>
-                <div id="id">
-                    <im class="im">
-                        <img src="/cs315/imag/im1.pg.jpg " width="20px">
-                        <img src="/cs315/imag/im1.pg.jpg " width="20px"></img>
-                        <img src="/cs315/imag/im1.pg.jpg " width="20px">
-                        <img src="/cs315/imag/im1.pg.jpg " width="20px">
-
-                </div>
+                <p style="color:white;">
+                    <img src="../images/twitter-white.png" style="width:20px;">4563789
                 </p>
-
-            </dive>
-            <div class="roundbox">
-                <label class="email">Entere-mail</label>
-                <label class="subscribe">Send</label>
+                <p style="color:white;">
+                    <img src="../images/twitter-white.png" style="width:20px;"> email.com
+                </p>
+                <div class="emailBox">
+                    <p style="padding:0px 20px;line-height: 10px;">Enter your e-mail</p>
+                    <div style="border-radius:40px;background-color: brown;color:white;">
+                        <p style="padding:0px 30px;line-height: 10px;"> Send</p>
+                    </div>
+                </div>
             </div>
-
-            <hr />
-            <im class="lastlin">
-                <p>Home</p>
-                <p>About</p>
-                <p>Our works</p>
-                <p>Services</p>
-                <p>Blog</p>
-                <p>Contact</p>
-                <p>Colorib</p>
-
-
+            <div class="middleColumngrid">
+                <img src="/cs315/imag/icons8-twitter-64.png" class="imgNew">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Nulla at volutpat diam ut venenatis tellus. Sed id semper risus</p>
+                <img src="/cs315/imag/icons8-twitter-64.png" class="imgNew">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Nulla at volutpat diam ut venenatis tellus. Sed id semper risus</p>
+                <img src="/cs315/imag/icons8-twitter-64.png" class="imgNew">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Nulla at volutpat diam ut venenatis tellus. Sed id semper risus</p>
+            </div>
+            <div class="lastColumn">
+                <img src="/cs315/imag/best.mg.jpg" class="imgClass" />
+                <img src="/cs315/imag/imag.rose.jpg" class="imgClass" />
+                <img src="/cs315/imag/pexels-buter.jpg" class="imgClass" />
+                <img src="/cs315/imag/pexels-line.jpg" class="imgClass" />
+            </div>
         </div>
-
+        <div style="border-top:1px solid #ffffff80">&nbsp;</div>
+        <div class="links">
+            <div style="display:flex;gap:15px;">
+                <label> Home</label>
+                <label> About</label>
+                <label> Our Works</label>
+                <label> Services</label>
+                <label> Blog</label>
+                <label> Contacts</label>
+            </div>
+            <div style="font-size: 18px;">
+                Colorlib
+            </div>
+        </div>
     </footer>
+
 </body>
 
 </html>
