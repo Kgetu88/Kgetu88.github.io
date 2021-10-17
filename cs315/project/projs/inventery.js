@@ -112,20 +112,20 @@ var array = [];
   // }
   // }
   // filter by rating
-  // function filter() {
-  //   console.log(array);
-  //   let filteredArray = array.filter((item) => Number(item.rate)>4);
+  function filter() {
+    console.log(array);
+    let filteredArray = array.filter((item) => Number(item.rate)>4);
      
-  //   let children = document.getElementById('items').childNodes;
-  //   for (let i = 4; i < children.length; i++){
-  //     let eachTr = children[i];
-  //     console.log(eachTr.children[4]);
-  //     if (Number(eachTr.children[4].innerHTML)<4) {
-  //       eachTr.style.display = "none";
-  //     }
+    let children = document.getElementById('items').childNodes;
+    for (let i = 4; i < children.length; i++){
+      let eachTr = children[i];
+      console.log(eachTr.children[4]);
+      if (Number(eachTr.children[4].innerHTML)<4) {
+        eachTr.style.display = "none";
+      }
 
-  //   }
-  // }
+    }
+  }
 
 
   // function clearFilter() {
@@ -139,19 +139,19 @@ var array = [];
   //   }
     
   // }
-  function filter() {
-    console.log(array);
-    let filteredArray = array.filter((item) => Number(item.quantity) > 100);
-    let children = document.getElementById('items').childNodes;
-    for (let i = 2; i < children.length; i++) {
-      let eachTr = children[i];
-      console.log(eachTr.children[2]);
-      if (Number(eachTr.children[2].innerHTML) < 100) {
-        eachTr.style.display = "none";
-      }
+  // function filter() {
+  //   console.log(array);
+  //   let filteredArray = array.filter((item) => Number(item.quantity) > 100);
+  //   let children = document.getElementById('items').childNodes;
+  //   for (let i = 2; i < children.length; i++) {
+  //     let eachTr = children[i];
+  //     console.log(eachTr.children[2]);
+  //     if (Number(eachTr.children[2].innerHTML) < 100) {
+  //       eachTr.style.display = "none";
+  //     }
 
-    }
-  }
+  //   }
+  // }
 
   function clearFilter() {
     console.log(array);
@@ -169,5 +169,3 @@ var array = [];
     infield.style.backgroundColor="red";
       
   }
-
-  

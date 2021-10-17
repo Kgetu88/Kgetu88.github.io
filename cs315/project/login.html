@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .roundImage {
+            border-radius: 50%;
+            width: 100px;
+            object-fit: cover;
+            height: 100px;
+            justify-self: center;
+        }
+
+        .main {
+            display: grid;
+
+            margin: auto;
+            gap: 15px;
+            width: 300px;
+            font-size: 20px;
+            margin-top: 20px;
+
+            border: 1px solid blue;
+            padding: 15px;
+        }
+
+        .innerDiv {
+            display: grid;
+
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="/cs315/project/image/amazonlogo.jpg" class="roundImage" />
+        <div class="innerDiv">
+            <label>Email</label>
+            <input type="text" id="email" />
+            <label>Password</label>
+            <input type="text" id="password" />
+        </div>
+        <button style="justify-self:center;" onclick="submit();">Login</button>
+        <div style="justify-self:center;"><a href="signup.html">New User? SignUp</a></div>
+    </div>
+    <div>
+        <h4>Tasks</h4>
+        Two Logins
+        <ul>
+            <li>Manager</li>
+            <li>Customer</li>
+        </ul>
+        Check the Username and password, if correct-> let them Login
+        If Username/password is incorrect -> Show the Validation Message.
+    </div>
+    <script>
+
+        function submit() {
+            let email = document.getElementById("email").value;
+            let pwd = document.getElementById("password").value;
+            if (email == 'manager@email.com' && pwd === "manager") {
+                window.location.href = "inventery.html";
+            }
+
+            else if (email == "customer@email.com" && pwd === "customer") {
+                window.location.href = "/cs315/project/landing.html";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

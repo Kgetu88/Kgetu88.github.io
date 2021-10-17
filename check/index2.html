@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main {
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 50px
+        }
+    </style>
+</head>
+
+<br>
+<center>
+    <h1>Well come to our page</h1>
+</center>
+<hr>
+<div id="main">
+    username:
+    <input type="text" id="user" name="text"><br></br>
+    password:
+    <input type="text" id="password" name="text"><br></br>
+    repassword:
+    <input type="text" id="repassword" name="text"><br></br>
+
+
+    <!-- <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="agree">
+        I agree with terms and conditions
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="letter">
+
+        I want to recive the newsletter </label>
+
+    </div> -->
+    <button onclick="login()">sumit</button><br>
+
+
+</div>
+</body>
+
+
+<script>
+    function login() {
+        const uservalue = document.getElementById("user").value;
+
+        const passcode = document.getElementById("password").value;
+        const repasscde = document.getElementById("repassword").value;
+        const condtion1 = document.getElementsByClassName(".form-check").value;
+
+
+        if (uservalue !== "sibhat@gmail.com") {
+            document.getElementById("user").value = "error"
+        }
+        else if (passcode.length < 6) {
+            document.getElementById("password").value = "too short pass word";
+        }
+        else if (passcode.length > 10) {
+            document.getElementById("password").value = "too log pass word ";
+
+        }
+        else if (passcode != repasscde) {
+            document.getElementById("repassword").value = "mismatch password";
+
+        }
+
+
+        else { location.assign("/check/index1.html"); }
+
+
+    }
+</script>
+
+</html>

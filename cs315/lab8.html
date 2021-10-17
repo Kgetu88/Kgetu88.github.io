@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
         <title>bootstrap cheech</title>
@@ -19,7 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <keyscript src="js/bootstrap.min.js"></keyscript>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .container {
@@ -39,21 +40,21 @@
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">📧</span>
             <input id="email" type="text" class="form-control" placeholder="Email" aria-label="Username"
-                aria-describedby="basic-addon1" required>
+                aria-describedby="basic-addon1">
 
         </div>
         <div class="input-group mb-3">
 
             <span class="input-group-text" id="basic-addon1">🔒</span>
-            <input type="text" id="password" class="form-control" placeholder="password" aria-label="Username"
-                aria-describedby="basic-addon1" required>
+            <input type="text" id="pass" class="form-control" placeholder="password" aria-label="Username"
+                aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group mb-3">
 
             <span class="input-group-text" id="basic-addon1">🔒</span>
             <input type="text" id="Re-type password" class="form-control" placeholder="Re-type password"
-                aria-label="Username" aria-describedby="basic-addon1" required>
+                aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
         <div class="row align-items-start">
@@ -62,7 +63,7 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">👤</span>
                     <input type="text" id="fname" class="form-control" placeholder="First Name" aria-label="Username"
-                        aria-describedby="basic-addon1" required>
+                        aria-describedby="basic-addon1">
                 </div>
             </div>
 
@@ -70,7 +71,7 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">👤</span>
                     <input type="text" id="lname" class="form-control " placeholder="Last Name" aria-label="Username"
-                        aria-describedby="basic-addon1" required>
+                        aria-describedby="basic-addon1">
 
                 </div>
             </div>
@@ -78,13 +79,13 @@
 
         <div class="form-check form-check-inline">
 
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" required>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="male">
             <label class="form-check-label" for="flexRadioDefault1">
                 Male
             </label>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" required>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="female">
                 <label class="form-check-label" for="flexRadioDefault2">
                     Female
                 </label>
@@ -99,22 +100,51 @@
 
         </select>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="agree" required>
+            <input class="form-check-input" type="checkbox" value="" id="agree" r>
             <label class="form-check-label" for="flexCheckDefault">
                 I agree with terms and conditions</label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="newlet" required>
+            <input class="form-check-input" type="checkbox" value="" id="newlet">
             <label class="form-check-label" for="flexCheckChecked">
                 I want to recive the newsletter </label>
 
         </div>
         <div class="sumit">
-            <button class="btn btn-warning" id="button" type="submit" style="width: 100%;">Registor</button>
+            <button onclick="Registor()" class="btn btn-warning" id="button" type="submit"
+                style="width: 100%;">Registor</button>
         </div>
 </div>
 </form>
 
 <body>
+    <script>
+        function Registor() {
+            const arrayElement = [];
+            const form = document.getElementsByTagName("form");
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("pass").value;
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const repassword = document.getElementById("Re-type password").value;
+            const male = document.getElementById("male").value;
+            const fname = document.getElementById("female").value;
+            const country = document.getElementById("country").value;
+            const agree = document.getElementById("agree").value;
+            const newlet = document.getElementById("newlet").value;
+            const erorElement = document.getElementById("error").value;
+            if (email === "" || password == "" || fname == "" || lname == "" || repassword == "") {
+                document.getElementById("password").value == "please put pass word";
+                document.getElementById("fname").value == "please put f name";
+                document.getElementById("lname").value == "please put lname";
+                document.getElementById("Re-type password").value.style.border = "1px solid red";
+            }
+
+
+        }
+
+
+
+    </script>
 
     </html>

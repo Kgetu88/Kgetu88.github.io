@@ -1,8 +1,8 @@
 function add() {
     let input = document.getElementById("textInput");
     let output = document.getElementById("textoutput")
-    output.value = input.value + input.value;
-    input.value = "";
+    output.value = input.value + output.value;
+     input.value = "";
 
    
 }

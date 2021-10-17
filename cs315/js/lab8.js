@@ -11,11 +11,12 @@ const arrayElement = [];
     const agree = document.getElementById("agree");
     const newlet = document.getElementById("newlet");
     const erorElement = document.getElementById("error");
-    for (let element of form.innerHtml) {
-        let elementval = element.value;
-        arrayElement.concat.push(elementval);
+    // for (let element of form.innerHtml) {
+    //     let elementval = element.value;
+    //     arrayElement.concat.push(elementval);
 
-    }
+         arrayElement.push(password.value);
+    // }
 
 
 
@@ -23,11 +24,7 @@ const arrayElement = [];
     form.addEventListener("Registor", (e) => {
 
 
-        for (let ele of arrayElement) {
-            if (ele.length <= 2) {
-                e.preventDefault();
-                email.innerText = message.join(', ');
-
-            }
+        if(arrayElement!==repassword.value){
+                password.style.border="2px  solid red" ;
         }
     });
