@@ -1,49 +1,41 @@
 
 "use strict"
 
-let list1={
-              name:"bb",
-              price: 4,
-               brand:"addidas",
-              rating: 3,
-                 id:"1",
-                 };
-  let list2 ={
-    name: "Getu",
-    brand:"nike",
-    price: 5,
-    rating: 4,
-       id:"2",
-        
-    };
-    
-    let list3 = {
-      name: "Aa",
-      price: 7,
-      brand:"nike",
-      rating: 2,
-         id:"3"
-    };
-    let list4 =  {
-    name: "Cc",
-    price: 7,
-    brand:"nike",
-    rating: 5,
-       id:"4",
-    };
+let overAll={
+  name:"Food dispenser",
+  price: 20,
+   brand:"pet feeder",
+  rating: 4,
+     id:"1",
+     };
+let shirt ={
+name: "Pet Toy",
+brand:"Pet toy",
+price: 15,
+rating: 3,
+id:"2",  
 
-    let list5 = {
-      name: "cc",
-      price: 4,
-      brand:"nike",
-      rating: 1,
-         id:"5"
-      }
-  
+};
 
-  const array1=[list1,list2,list3,list4,list5];
+let gymThermal = {
+name: "Dog Food",
+price: 8,
+brand:"Dog's Nutrtion",
+rating: 2,
+id:"3"
+};
+let brownLeatherJacket=  {
+name: "Dog Cuddler",
+price:33,
+brand:"pet cuddle",
+rating: 4,
+id:"2",
+};
 
-  
+
+
+
+const array1=[overAll,shirt,gymThermal,brownLeatherJacket];
 
 
   function addItem() {

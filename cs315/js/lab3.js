@@ -141,12 +141,12 @@ var array = [];
   // }
   function filter() {
     console.log(array);
-    let filteredArray = array.filter((item) => Number(item.quantity) > 100);
+    let filteredArray = array.filter((item) => Number(item.price) >30);
     let children = document.getElementById('items').childNodes;
-    for (let i = 2; i < children.length; i++) {
+    for (let i = 3; i < children.length; i++) {
       let eachTr = children[i];
-      console.log(eachTr.children[2]);
-      if (Number(eachTr.children[2].innerHTML) < 100) {
+      console.log(eachTr.children[3]);
+      if (Number(eachTr.children[3].innerHTML) <30) {
         eachTr.style.display = "none";
       }
 

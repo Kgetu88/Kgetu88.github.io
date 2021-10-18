@@ -1,46 +1,40 @@
 "use strict"
 
-let list1={
-              name:"bb",
-              price: 4,
-               brand:"addidas",
-              rating: 3,
-                 id:"1",
-                 };
-  let list2 ={
-    name: "Getu",
-    brand:"nike",
-    price: 5,
-    rating: 4,
-       id:"2",
-        
-    };
-    
-    let list3 = {
-      name: "Aa",
-      price: 7,
-      brand:"nike",
-      rating: 2,
-         id:"3"
-    };
-    let list4 =  {
-    name: "Cc",
-    price: 7,
-    brand:"nike",
-    rating: 5,
-       id:"4",
-    };
+let overAll={
+  name:"Dress",
+  price: 25,
+   brand:"Banana Republic",
+  rating: 4,
+     id:3,
+     };
+let shirt ={
+name: "long Sweater",
+brand:"H&M",
+price: 33,
+rating: 3,
+id:2,  
 
-    let list5 = {
-      name: "cc",
-      price: 4,
-      brand:"nike",
-      rating: 1,
-         id:"5"
-      }
-  
+};
 
-  const array1=[list1,list2,list3,list4,list5];
+let gymThermal = {
+name: "Sweater",
+price: 81,
+brand:"nike",
+rating:4,
+id:4
+};
+let brownLeatherJacket=  {
+name: "ladies Jacet",
+price:46,
+brand:"leathers",
+rating: 4,
+id:1,
+};
+
+
+
+
+const array1=[overAll,shirt,gymThermal,brownLeatherJacket];
 
   
 
@@ -81,13 +75,13 @@ let list1={
   
   function filter() {
     console.log(array1);
-    let filteredArray = array1.filter((item) =>Number(item.price)>8);
+    let filteredArray = array1.filter((item) =>Number(item.price)>50);
      
     let children = document.getElementById('items').childNodes;
     for (let i = 1; i < children.length; i++){
       let eachTr = children[i];
       console.log(eachTr.children[1]);
-      if (Number(eachTr.children[1].innerHTML)<8) {
+      if (Number(eachTr.children[1].innerHTML)<30) {
         eachTr.style.display = "none";
       }
 
@@ -101,7 +95,7 @@ let list1={
     for (let i = 3; i < children.length; i++){
       let eachTr = children[i];
       console.log(eachTr.children[3]);
-      if (Number(eachTr.children[3].innerHTML)<3) {
+      if (Number(eachTr.children[3].innerHTML)<5) {
         eachTr.style.display = "none";
       }
 
@@ -126,9 +120,9 @@ let list1={
 
   function clearFilter() {
     console.log(array1);
-    let filteredArray = array1.filter((item) => Number(item.price)>8);
+    let filteredArray = array1.filter((item) => Number(item.price)>30);
     let children = document.getElementById('items').childNodes;
-    for (let i = 1; i < children.length; i++) {
+    for (let i = 1; i < children.length; i++) { 
       let eachTr = children[i];
       console.log(eachTr.children[1]);
       eachTr.style.display = "";

@@ -19,9 +19,9 @@
 </head>
 
 <br>
-<center>
+<div>
     <h1>Well come to our page</h1>
-</center>
+</div>
 <hr>
 <div id="main">
     username:
@@ -59,7 +59,8 @@
 
 
         if (uservalue !== "sibhat@gmail.com") {
-            document.getElementById("user").value = "error"
+
+            document.getElementById("user").value = "Invalid";
         }
         else if (passcode.length < 6) {
             document.getElementById("password").value = "too short pass word";

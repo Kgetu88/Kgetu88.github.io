@@ -3,7 +3,14 @@
 
 <head>
 
+
+
     <style>
+        body {
+            background-color: rgb(67, 67, 131);
+            align-content: center;
+        }
+
         .roundImage {
             border-radius: 50%;
             width: 100px;
@@ -12,17 +19,21 @@
             justify-self: center;
         }
 
+
         .main {
+
             display: grid;
 
             margin: auto;
             gap: 15px;
             width: 300px;
             font-size: 20px;
-            margin-top: 20px;
+            margin-top: 10%;
+            border-radius: 5%;
 
-            border: 1px solid blue;
+            background-color: rgb(221, 151, 59);
             padding: 15px;
+            padding-top: -2%;
         }
 
         .innerDiv {
@@ -32,22 +43,47 @@
             gap: 15px;
             justify-content: center;
         }
+
+        .containerA {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            background-color: rgb(3, 3, 3);
+            height: 60px;
+            width: 100%;
+            margin-right: -5%;
+            margin-left: 0%;
+
+
+        }
     </style>
 </head>
 
 <body>
+    <div class="containerA">
+        <div class="box box1">
+            <img src="/cs315/project/image/Amazon-Logo 4.jpg" style="width:90px; height:100%;margin-left:13px;">
+        </div>
+
+
+
+    </div>
+    </div>
+
     <div class="main">
-        <img src="/cs315/project/image/amazonlogo.jpg" class="roundImage" />
+        <p>Welcome </p>
+        <img src="/cs315/project/image/login.png" class="roundImage" />
         <div class="innerDiv">
             <label>Email</label>
-            <input type="text" id="email" />
+            <input style="background-color:black;color: white;" type="text" id="email" />
             <label>Password</label>
-            <input type="text" id="password" />
+            <input style="background-color:black;color: white;" type="text" id="password" />
         </div>
-        <button style="justify-self:center;" onclick="submit();">Login</button>
-        <div style="justify-self:center;"><a href="signup.html">New User? SignUp</a></div>
+        <button style="justify-self:center;border-radius: 5%;background-color: black;color:white;"
+            onclick="submit();">Login</button>
+        <div style="justify-self:center;"><a href="/cs315/project/registrationform.html">Create account</a></div>
     </div>
-    <div>
+    <!-- <div>
         <h4>Tasks</h4>
         Two Logins
         <ul>
@@ -56,7 +92,7 @@
         </ul>
         Check the Username and password, if correct-> let them Login
         If Username/password is incorrect -> Show the Validation Message.
-    </div>
+    </div> -->
     <script>
 
         function submit() {

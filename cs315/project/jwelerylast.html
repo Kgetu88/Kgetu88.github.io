@@ -13,181 +13,142 @@
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 10px;
-            width: 100%;
-            margin-right: 10px;
-            background-color: rgb(8, 8, 53);
-
-            height: 400px;
-
-        }
-
-        .containerA {
-            display: flex;
-            flex-direction: row;
-            color: white;
-            background-color: rgb(34, 32, 32);
-            height: 15%;
-
-            margin-right: -5%;
-            margin-left: 0%;
-
-        }
-
-        .container-2 {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-            height: 150%;
-            align-items: flex-end;
-
-            background-image: url("/cs315/project/image/background.jpg");
-            background-repeat: no-repeat;
-            background-size: 100px;
-            background-size: 100%;
-            background-attachment: scroll;
+    <script src="/cs315/project/projs/herlist.js"></script>
 
 
+</head>
+<style>
+    .flextcontaint {
+        height: 300px;
+        display: flex;
+        border: 2px solid black;
+
+        justify-content: space-around;
+    }
+
+    .boxitem {
+
+        background-color: white;
+        flex: 0 1 100%;
+
+    }
+
+    .boxsub {
+        margin: 5px;
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: space-around;
+        column-gap: 5px;
+        row-gap: 5px;
+        flex: 2 100%
+    }
+
+    body {
+        margin: 10px;
+        width: 100%;
+        margin-right: 10px;
+        background-color: rgb(8, 8, 53);
+
+        height: 400px;
+
+    }
+
+    .containerA {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        background-color: rgb(34, 32, 32);
+        height: 15%;
+
+        margin-right: -5%;
+        margin-left: 0%
+    }
+</style>
+<style>
+    .imgNew {
+        color: white;
+        width: 20px;
+        object-fit: contain;
+        margin-top: 15px;
+    }
+
+    .imgClass {
+        width: 40%;
+        object-fit: contain;
+    }
+
+    footer {
+        display: flex;
+        width: auto;
+        background-color: black;
+        flex-direction: column;
+        padding: 50px 100px;
+        margin-top: 10px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.8fr;
+        row-gap: 10px;
+        column-gap: 30px;
+        color: white;
+        justify-content: center;
+        color: gray;
+
+    }
+
+    .heading {
+        font-size: 20px;
+        color: white;
+    }
+
+    .aboutMeMargin {
+        margin-bottom: 40px;
+    }
+
+    .middleColumngrid {
+        display: grid;
+        column-gap: 20px;
+        align-content: start;
+
+        grid-template-columns: 20px 1fr;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .lastColumn {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .emailBox {
+        height: 40px;
+        width: 80%;
+        color: white;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 40px;
 
 
-        }
 
-        .item {
-            display: flex;
-            border: solid white;
-            height: 30%;
-            width: 40%;
-            color: aliceblue;
-            margin-left: 2px;
-
-
-        }
-
-        .item1 {
-            display: flex;
-            gap: 10px;
-            align-items: flex-end;
-            background-color: white;
-            flex-direction: row;
-
-
-
-        }
-
-        .box1 {
-            display: flex;
-
-            width: 5%;
-            height: 70px;
-
-        }
-
-        .table {
-            display: grid;
-            grid-template-columns: auto auto;
-
-
-            column-gap: 5px;
-            margin-bottom: -26px;
-            background-color: antiquewhite;
-
-        }
-
-        .box2 {
-            display: grid;
-
-            margin-bottom: 25px;
-            justify-content: end;
-
-
-        }
-    </style>
-
-
-
-    <style>
-        .imgNew {
-            color: white;
-            width: 20px;
-            object-fit: contain;
-            margin-top: 15px;
-        }
-
-        .imgClass {
-            width: 40%;
-            object-fit: contain;
-        }
-
-        footer {
-            display: flex;
-            width: auto;
-            background-color: black;
-            flex-direction: column;
-            padding: 50px 100px;
-            margin-top: 10px;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 0.8fr;
-            row-gap: 10px;
-            column-gap: 30px;
-            color: white;
-            justify-content: center;
-            color: gray;
-
-        }
-
-        .heading {
-            font-size: 20px;
-            color: white;
-        }
-
-        .aboutMeMargin {
-            margin-bottom: 40px;
-        }
-
-        .middleColumngrid {
-            display: grid;
-            column-gap: 20px;
-            align-content: start;
-
-            grid-template-columns: 20px 1fr;
-            font-size: 14px;
-            font-style: italic;
-        }
-
-        .lastColumn {
-            display: flex;
-            flex-wrap: wrap;
-            align-content: flex-start;
-
-        }
-
-        .links {
-            display: flex;
-            justify-content: space-between;
-            color: white;
-        }
-
-        .emailBox {
-            height: 40px;
-            width: 80%;
-            color: white;
-            background-color: darkslategray;
-            display: flex;
-            justify-content: space-between;
-            border-radius: 40px;
-
-        }
-    </style>
+    }
+</style>
 
 </head>
 
 <body>
+
+
     <div class="containerA">
         <div class="box box1">
             <img src="/cs315/project/image/amazonlogo.jpg" style="width:70px; height:85%;margin-left:-13px;">
@@ -195,7 +156,7 @@
         <div class="box box2" style="width:100px;height:100%;margin-left:70px;"><img
                 src="/cs315/project/image/location.PNG"></div>
 
-        <div class="box box3" style="width:50%;margin-left:30px;">
+        <div class="box box3" style="width:50%;margin-left:80px;">
             <div class="input-group" style="height: 70%; margin-top: 7px;">
                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                     style=" color:rgb(71, 69, 69);background-color:aliceblue;">All</button>
@@ -237,72 +198,64 @@
         </div>
     </div>
 
-    <div class="container-2">
+    <div class="flextcontaint">
 
+        <div class="boxitem">
+            Neckless Crystal
 
-
-
-        <div class="item item1" style="height:30%;width: 20%;margin-left:10px;">
-
-            <div class="card" style="width:40%;border: solid white;">
-
-                <img src="/cs315/project/image/him.jpg" style=" margin-bottom: -30%;">
+            <div class="card" style="width:auto;height:258px;">
+                <img src="/cs315/project/image/jewlery2.jpg" style="width:40%;margin-left:20px;" class="card-img-top"
+                    alt="...">
                 <div class="card-body">
-                    <a href="#" class="btn" style="height:1px;"><a href="/cs315/project/productListHim.html">Him</a>
+                    <h5 class="card-title"></h5>
+
+
                 </div>
+
             </div>
-
-            <div class="card" style="width:40%;border: solid white;">
-
-                <img src="/cs315/project/image/her.jpg" style=" margin-bottom: -30%;margin-left:10%;">
-                <div class="card-body" style="height: 47px;">
-
-                    <a href="#" class="btn"><a href="/cs315/project/productListHer.html">Her</a></a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="item item1" style="height:30%;width: 30%;">
-
-            <div class="card" style="width:50%;border: solid white;">
-
-                <img src="/cs315/project/image/jewles.jpg" style=" margin-bottom: -20%;height:124px">
-                <div class="card-body">
-                    <a href="#" class="btn" style="height:1px;"><a href="/cs315/project/jewlery.html">Jewlery</a>
-                </div>
-            </div>
-            <div class="card" style="width:50%;height:85% ;border: solid white;">
-
-                <img src="/cs315/project/image/pet 2.jpg" style="height: 125px; margin-bottom: -20%;">
-                <div class="card-body">
-                    <a href="#" class="btn" style="height:10%;"><a href="/cs315/project/productListPet.html">Pets</a>
-                </div>
-            </div>
-        </div>
-        <div class="item item1" style="width:30%;height:30% ;border: solid white;">
-            <div class="card" style="width:50%;border: solid white;">
-
-                <img src="/cs315/project/image/bose.png"
-                    style="width:130%;height: 125px; margin-bottom: -30%;margin-left: 50%; border:solid white">
-                <div class="card-body">
-                    <a href="#" class="btn" style="height:10%;"><a
-                            href="/cs315/project/electronics .html">Electronics</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="item item1" style="height:30%;width: 25%;margin-right:20px;">
-            <h5 style="color: black;margin-bottom:25%;padding-left:30px;"><b>Sign in for the best
-                    Experience</b></h5>
-            <input type="text" value="Sign in securley"
-                style="width:500px;margin-bottom:10px;background-color: rgb(255, 230, 0); color: black;margin-right:100px;margin-left: -100px; border-top-left-radius:5px; border-top-right-radius: 5px ;border-bottom-left-radius: 5px; border-bottom-right-radius: 5px ;text-align: center; ">
 
         </div>
-        <!-- </rrrrrrrrrrrrrrrrrrrrrrrrr> -->
+        <div class="boxitem">
+
+            <div class="card" style="width:auto;height:297px;">
+
+
+                <div class="card-body">
+                    <p class="card-text">ANRABESS Women Turtleneck Long Lantern Sleeve Casual Loose Oversized Sweater
+                        Dress Soft Winter Pullover Dresses </p>
+
+                    <input class="list-group-item" style="margin-left:10px">rating ⭐⭐⭐⭐🔻<br></br>
+                    <input type="checkbox" style="margin-left: 10px; color: green"> Save an extra 10% when
+                    you apply this coupon.
+
+                    <p> Availabel a lower price from other Sellers that may not offer free Prime Shiping</p>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="boxitem">
+            <div class="item1"
+                style="border:2px solid silver;width:40%;height: 70%;margin-left:20px;margin-top:10px; color: red;margin-bottom:10px;padding-left:9px;border-radius:5px;">
+                $40 <sup>00</sup><br>
+                This item can not be shipped to <br>
+                your selected delivery location<br>
+                please choose differnt<br>
+                delivery location
+            </div>
+            <a href="thankYou.html"> <button type="button"
+                    style="background-color:orange;margin-left:50px;border-radius:5px;">Buy</button></a>
+
+
+        </div>
+
+    </div>
+
+    </div>
     </div>
 
 
@@ -330,8 +283,7 @@
                 <div class="emailBox">
                     <p style="padding-top:15px;padding-left:10px;line-height: 10px;;">Enter your e-mail</p>
                     <div style="border-radius:40px;background-color:chocolate;color:white;">
-                        <p style="padding:0px 30px;line-height: 10px;padding-top:10px; padding-left:10px;"> Send
-                        </p>
+                        <p style="padding:0px 30px;line-height: 10px;padding-top:10px; padding-left:10px;"> Send</p>
                     </div>
                 </div>
             </div>
@@ -379,7 +331,10 @@
         </div>
     </footer>
 
-
 </body>
+
+
+
+
 
 </html>

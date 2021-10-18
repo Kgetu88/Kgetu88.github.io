@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <style>
+        .container {
+            margin-top: 50px;
+            border-top: 4px solid yellow;
+            width: 700px;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px solid wheat;
+            border-right: 2px solid whitesmoke;
+            height: 400px;
+            background-color: whitesmoke;
+        }
+
+        .box1 {
+            width: 62%;
+            height: 30px;
+        }
+
+        .box2 {
+            width: 30%;
+            height: 30px;
+        }
+    </style>
+</head>
+
+
+<div>
+    <h1>Well come to our page</h1>
+</div>
+<div class="container">
+    <form action="/cs315/project/preview.html">
+
+
+        <input class="box1" type="text" id="user" name="email" placeholder="Enter Email"><br></br>
+
+        <input class="box1" type="text" id="password" name="text" placeholder="Enter password"><br></br>
+        <input class="box1" type="text" id="repassword" name="text" placeholder="Confirm Password"><br></br>
+        <input class="box2" type="text" id="fname" name="fname1" placeholder="Enter First Name">
+        <input class="box2" type="text" id="lname" name="lname1" placeholder="Enter Last Name"><br></br>
+        <div class="form">
+            <input class="form-check-input" type="radio" name="male1" id="male"> Male
+            <input class="form-check-input" type="radio" name="female1" id="female">Female
+
+        </div>
+
+        <select class="form-select" id="country" style="margin-top: 15px;">
+            <option class="selected" required>Select a country</option>
+            <option class="selected">USA</option>
+            <option value="selected">Rusia</option>
+            <option value="selected">Ethiopia</option>
+            <option value="selected">India</option>
+
+        </select><br><br>
+
+        <div class="check">
+            <input class="form-check-input" type="checkbox" value="" id="agree">
+            <label class="form-check-label" for="flexCheckDefault">
+                I agree with terms and conditions</label><br>
+
+            <div class="check">
+                <input class="form-check-input" type="checkbox" value="" id="newlet">
+                <label class="form-check-label" for="flexCheckChecked">
+                    I want to recive the newsletter </label>
+
+            </div>
+
+            <button onclick="login()">Register</button><br>
+
+
+        </div>
+
+
+
+    </form>
+
+
+</div>
+</body>
+
+
+<script>
+    function login() {
+        const user = document.getElementById("user").value;
+        const passcode = document.getElementById("password").value;
+        const repasscde = document.getElementById("repassword").value;
+        const fName = document.getElementById("fname").value;
+        const lastName = document.getElementById("lname").value;
+
+        if (user == "" || fName === "" || lastName == "" || passcode == "" || uservalue || repasscde == "") {
+            document.getElementById("user").value = "Please Enter user ";
+
+            document.getElementById("password").value = "Please Enter password";
+            document.getElementById("repassword").value = "Please  Confirm"
+            document.getElementById("fname").value = "Please Enter First Name";
+            document.getElementById("lname").value = "Please Enter Last Name";
+
+        }
+
+        else if (passcode.length < 6 && passcode > 10) {
+            document.getElementById("password").value = "Password length should be 6-10";
+        }
+
+        else if (passcode !== repasscde) {
+            document.getElementById("repassword").value = "password mismatched";
+
+        }
+
+
+
+
+    }
+</script>
+
+</html>
