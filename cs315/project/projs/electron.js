@@ -74,20 +74,20 @@ let overAll={
       }
 
   
-  function filter() {
-    console.log(array1);
-    let filteredArray = array1.filter((item) =>Number(item.price)>8);
-     
-    let children = document.getElementById('items').childNodes;
-    for (let i = 1; i < children.length; i++){
-      let eachTr = children[i];
-      console.log(eachTr.children[1]);
-      if (Number(eachTr.children[1].innerHTML)<8) {
-        eachTr.style.display = "none";
+      function filterPrice() {
+        array1.sort(function(a, b){return a.price - b.price});
+        
+        let children = document.getElementById('items').childNodes;
+        for (let i = 3; i < children.length; i++){
+           let eachTr = children[i];
+          console.log(eachTr.children[3]);
+          if (Number(eachTr.children[3].innerHTML)<3) {
+             eachTr.style.display = "none";
+          }
+    
+        }
+      
       }
-
-    }
-  }
   function filterRate(){
     console.log(array1);
     let filteredArray = array1.filter((item) => Number(item.rating)>3);

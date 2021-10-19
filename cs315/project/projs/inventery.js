@@ -165,7 +165,4 @@ var array = [];
 
   }
 
-  function turnRed(infield){
-    infield.style.backgroundColor="red";
-      
-  }
+  

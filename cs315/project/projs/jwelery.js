@@ -1,40 +1,41 @@
 "use strict"
+let wristJewllery={
+    name:"Wrist jewllery",
+    price: 61,
+     brand:"Hand Made",
+    rating: 4,
+       id:"1",
+       };
+  let neckless ={
+  name: "Neckless",
+  price: 40,
+  brand:"Crystal",
+  
+  rating: 3,
+  id:"2",  
+  
+  };
+  
+  let earRing = {
+  name: "Ear ring",
+  price: 16,
+  brand:"Flower",
+  rating: 2,
+  id:"3"
+  };
+  
+  let ring=  {
+    name: "Ring",
+    price:25,
+    brand:"Silver ear rings",
+    rating: 4,
+    id:"2",
+    };
 
-let overAll={
-  name:"Blue over all",
-  price: 46,
-   brand:"Versace",
-  rating: 4,
-     id:"1",
-     };
-let shirt ={
-name: "Male Slim Fit Shirt",
-price: 33,
-brand:"H&M",
-rating: 3,
-id:"2",  
-
-};
-
-let gymThermal = {
-name: "Gym Thermal",
-price: 23,
-brand:"nike",
-rating: 2,
-id:"3"
-};
-let brownLeatherJacket=  {
-name: "Brown Leather Jacket",
-price:91,
-brand:"leathers",
-rating: 4,
-id:"2",
-};
 
 
 
-
-const array1=[overAll,shirt,gymThermal,brownLeatherJacket];
+const array1=[wristJewllery,neckless,earRing,ring];
   
 
 
@@ -86,7 +87,20 @@ const array1=[overAll,shirt,gymThermal,brownLeatherJacket];
       }
 
   
-  
+  // function filterPrice(){
+  //   console.log(array1);
+  //   let filteredArray = array1.filter((item) => Number(item.price)>100);
+     
+  //   let children = document.getElementById('items').childNodes;
+  //   for (let i = 1; i < children.length; i++){
+  //     let eachTr = children[i];
+  //     console.log(eachTr.children[1]);
+  //     if (Number(eachTr.children[1].innerHTML)<100) {
+  //       eachTr.style.display = "none";
+  //     }
+
+  //   } 
+  // }
 
   function filterPrice() {
     array1.sort(function(a, b){return a.price - b.price});

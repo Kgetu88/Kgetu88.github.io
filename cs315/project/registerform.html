@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            margin-top: 50px;
+            border-top: 4px solid yellow;
+            width: 700px;
+            padding-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px solid wheat;
+            border-right: 2px solid whitesmoke;
+            height: 400px;
+            background-color: whitesmoke;
+            margin-left: 10%;
+        }
+
+        .form-control {
+            margin-left: 10%;
+            height: 50px;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 style="margin-left: 15%">Create new amazon account</h2>
+        </div>
+        <form id="form" class="form" method="get" action="preview.html">
+            <div class="form-control">
+                <label for="username"> User name</label>
+                <input style="height: 20px" type="text" aria-placeholder="user name" id="username" name="username" />
+                <small></small>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input style="height: 20px ;" type="email" placeholder="Enter email" id="email" name="email" />
+                <small></small>
+            </div>
+            <div class="form-control">
+                <label for="username">pass word</label>
+                <input style="height: 20px" type="password" placeholder="password" id="password" />
+                <small></small>
+            </div>
+            <div class="form-control">
+                <label for="username"> confirm</label>
+                <input style="height: 20px" type="password" placeholder="confirm password" id="password2" />
+                <small></small>
+            </div>
+            <button style="
+            margin-left: 20%;
+            margin-top: 5%;
+            background-color: rgb(255, 169, 71);
+          " type="register" value="register">
+                Register
+            </button>
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.getElementById("form");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const password2 = document.getElementById("password2");
+
+    form.addEventListener("register", (e) => {
+        alert("register");
+        if (!isValid()) e.preventDefault();
+    });
+
+    function isValid() {
+        const usernameValue = username.value.trim();
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+        const password2Value = password2.value.trim();
+        let valid = true;
+        if (usernameValue === "") {
+            valid = false;
+            setErrorFor(username, "please fill user name");
+        } else {
+            setSuccessFor(username);
+        }
+
+        if (emailValue === "") {
+            valid = false;
+            setErrorFor(email, "Enter email");
+        }
+        else if (!isEmail(emailValue)) {
+            valid = false;
+            setErrorFor(email, "Invalid email");
+        }
+        else {
+            setSuccessFor(email);
+        }
+
+        if (passwordValue === "") {
+            valid = false;
+            setErrorFor(password, "Enter password");
+        }
+        else if (!isPassword(passwordValue)) {
+            valid = false;
+            setErrorFor(password, "Invalid password");
+        }
+        else {
+            setSuccessFor(password);
+        }
+
+        if (password2 === "") {
+            valid = false;
+            setErrorFor(password2, "Enter password");
+        } else if (passwordValue !== password2Value) {
+            valid = false;
+            setErrorFor(password2, "mismatch password!");
+        }
+
+        else {
+            setSuccessFor(password2);
+        }
+        console.log(valid);
+        return valiid;
+    }
+
+    function setErrorfor(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector("small");
+        formControl.className = "form-control error";
+        small.innerText = message;
+    }
+    function setSuccessFor(input) {
+        const formControll = input.parentElement;
+        formControl.className = "form-control succesd";
+    }
+
+
+</script>
+
+</html>

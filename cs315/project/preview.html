@@ -1,32 +1,64 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>preview</title>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Preview</title>
+
 </head>
 
 <body>
-    <label> Name list</label>
+
+
+    <label for="username"></label>
+
+
+
+    <button onclick="edit()">Edit</button>
+
+
+
     <script>
+
         const urlParams = new URLSearchParams(window.location.search);
-        const myparm = urlParams.get("email");
-        console.log(urlParams.get("email"))
-        const myparm = urlParams.get("fname1");
-        console.log(urlParams.get("fname1"))
-        const myparm = urlParams.get("lname1");
-        console.log(urlParams.get("lname1"))
-        const myparm = urlParams.get("male1");
-        console.log(urlParams.get("male1"))
-        const myparm = urlParams.get("female1");
-        console.log(urlParams.get("female1"))
-        let label = document.getElementsByTagName('label')[0];
-        label.innerHTML = urlParams.get("email");
-        "\n" + urlParams.get("fname") + "\n" + urlParams.get("lname") + "\n" + urlParams.get("male") + " " + urlParams.get("female");
+
+
+
+        const myParam = urlParams.get("username");
+
+
+
+        let label = document.getElementsByTagName("label")[0];
+
+        label.innerHTML =
+
+            urlParams.get("username") +
+
+            " " +
+
+            urlParams.get("email") +
+
+            " " +
+
+            urlParams.get("password");
+
+
+
+        function edit() {
+
+            window.location.href = "registerform.html";
+
+        }
 
     </script>
+
 </body>
 
 </html>
